@@ -1,10 +1,9 @@
 CC=gcc
 CFLAGS= -Wall -g 
-DEPS=Complex.h
-OBJ=Complex.o ex3.o
+DEPS=Matrix.h Vector.h
+OBJ=Matrix.o Vector.o main.o
 LIBS=-lm
-SRCS=main.c Vector.c 
-DEPS=Vector.h
+SRCS=main.c Vector.c Matrix.c
 OBJS=$(SRCS:.c=.o)
 MAIN=main
 
