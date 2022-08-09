@@ -1,9 +1,9 @@
 CC=gcc
 CFLAGS= -Wall -g 
-DEPS=Matrix.h Vector.h Computational_utils.h
-OBJ=Matrix.o Vector.o main.o Computational_utils.o
-LIBS=-lm
-SRCS=main.c Vector.c Matrix.c Computational_utils.c
+DEPS=Matrix.h Vector.h Computational_utils.h Signal_processing.h IO.h
+OBJ=Matrix.o Vector.o main.o Computational_utils.o Signal_processing.o IO.o
+LIBS=-lm 
+SRCS=main.c Vector.c Matrix.c Computational_utils.c Signal_processing.c IO.c
 OBJS=$(SRCS:.c=.o)
 MAIN=main
 

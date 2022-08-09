@@ -18,6 +18,7 @@ Matrix rm_row(Matrix *mat, int id);
 Matrix rm_col(Matrix *mat, int id);
 Matrix concat_mat(Matrix *mat1, Matrix *mat2); // to develop later
 Matrix identity_mat(size_t size);
+void matcpy(Matrix *mat1, Matrix *mat2);
 double det(Matrix *mat);
 double l1_norm_mat(Matrix *mat);
 double l2_norm_mat(Matrix *mat);

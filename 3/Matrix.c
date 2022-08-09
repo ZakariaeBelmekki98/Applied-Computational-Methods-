@@ -122,6 +122,14 @@ Matrix rm_col(Matrix *mat, int id){
 	return result;
 }
 
+void matcpy(Matrix *dst, Matrix *src){
+	dst->rows = src->rows;
+	dst->cols = src->cols;
+	dst->data = malloc(sizeof(double)*dst->rows*dst->cols);
+	memcpy(dst->data, src->data, sizeof(double)*src->rows*src->cols);
+
+}
+
 double det(Matrix *mat){
 	double result = 0;
 	int flag = 0;

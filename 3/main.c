@@ -1,13 +1,9 @@
-#include "Computational_utils.h"
-
+#include "Signal_processing.h"
+#include "IO.h"
 
 int main(){
-
-	
-	Matrix m1;
-	double arr[] = {1, 12, 1, 2, 7, 6, 1.2, 12, 45};
-	init_mat(&m1, 3, 3, arr);
-	print_mat(&m1);
-	printf("Det: %f\n", det(&m1));
+	double arr[] = {1.23, -11, 3.45, -10.5, 5.3, -4};
+	double *res = moving_avg_filter(arr, 6);
+	plot(res, 6);	
 	return 0;
 }
