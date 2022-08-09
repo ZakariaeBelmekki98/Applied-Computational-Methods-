@@ -1,8 +1,13 @@
 #include "Vector.h"
 
-void init_vector(Vector *vector, int _size){
-	vector->data = malloc(sizeof(double) * _size);
+void init_vector(Vector *vector, int _size, double *data){
+	vector->data = calloc(_size, sizeof(double));
 	vector->size = _size;
+	if(vector->data == NULL){
+		printf("Vector::init_vector: malloc() failed to allocate memory.\n");
+		exit(1);
+	}
+	memcpy(vector->data, data, _size);
 }
 
 Vector dot_product(Vector *v1, Vector *v2){

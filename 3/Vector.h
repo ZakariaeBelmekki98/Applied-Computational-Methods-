@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
 
 typedef struct {
 	double *data;
@@ -8,7 +9,7 @@ typedef struct {
 } Vector;
 
 
-void init_vector(Vector *vector, int _size);
+void init_vector(Vector *vector, int _size, double *data);
 Vector dot_product(Vector *v1, Vector *v2);
 double l1_norm(Vector *vector);
 double l2_norm(Vector *vector);
