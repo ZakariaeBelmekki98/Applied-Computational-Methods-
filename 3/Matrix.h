@@ -1,3 +1,4 @@
+#pragma once
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
@@ -9,7 +10,7 @@ typedef struct {
 } Matrix;
 
 
-void init_mat(Matrix *mat, int rows, int cols, double *data);
+void init_mat(Matrix *mat, size_t rows, size_t cols, double *data);
 void print_mat(Matrix *mat);
 Matrix add_mat(Matrix *mat1, Matrix *mat2);
 Matrix multiply_mat(Matrix *mat1, Matrix *mat2);

@@ -1,7 +1,7 @@
 #include "Matrix.h"
 
 
-void init_mat(Matrix *mat, int _rows, int _cols, double *_data){
+void init_mat(Matrix *mat, size_t _rows, size_t _cols, double *_data){
 	mat->rows = _rows;
 	mat->cols = _cols;
 	mat->data = calloc(_rows*_cols, sizeof(double));
